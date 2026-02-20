@@ -1,0 +1,469 @@
+Love it. We’re building this properly.
+
+Below is **ready-to-plug copy** for every page in your structure **except the landing page**, including services + legal pages.
+
+Tone:
+Clinical.
+Warm.
+Clear.
+Trust-building.
+No fluff.
+No preachy faith language.
+Strong confidentiality positioning.
+
+You can paste these directly into your Vue views.
+
+---
+
+# 📄 ABOUT PAGE
+
+`/about`
+
+## Headline
+
+About Nangura Social Care
+
+## Subheading
+
+Professional psychological support rooted in compassion, confidentiality, and clinical integrity.
+
+## Body Copy
+
+Nangura Social Care is a professional counselling practice serving individuals, couples, children, and families across Namibia.
+
+Founded and led by a UNAM-trained Social Worker with years of professional experience, this practice is built on one simple belief:
+
+Every person deserves to be heard with dignity and respect.
+
+With experience working within structured health environments and supporting diverse communities, Nangura Social Care offers counselling that is:
+
+• Ethical
+• Confidential
+• Evidence-based
+• Culturally aware
+• Grounded in professional standards
+
+Whether you are navigating stress, relationship challenges, trauma, emotional overwhelm, or life transitions, sessions are designed to provide structured guidance and a safe environment for meaningful progress.
+
+In-person sessions are available in Tsumeb, Oshikoto Region.
+Online sessions are available nationwide across Namibia.
+
+Seeking support is not a sign of weakness. It is a step toward clarity and stability.
+
+---
+
+# 📄 SERVICES OVERVIEW
+
+`/services`
+
+## Headline
+
+Psychological Counselling Services in Namibia
+
+## Intro Copy
+
+Life presents challenges in many forms.
+The right support can make those challenges manageable.
+
+Nangura Social Care offers structured counselling services tailored to different stages of life and areas of concern.
+
+All sessions are confidential and professionally guided.
+
+## Service List Summary Sections
+
+### Individual Counselling
+
+Support for anxiety, depression, grief, stress, trauma, life transitions, and emotional difficulties.
+
+### Couples Counselling
+
+Helping partners improve communication, resolve conflict, and rebuild trust.
+
+### Child Counselling
+
+Professional support for emotional, behavioural, and developmental challenges in children.
+
+### Trauma Counselling
+
+Structured support for individuals experiencing the impact of trauma or distressing events.
+
+### Workplace & Burnout Counselling
+
+Support for professionals facing work stress, burnout, and performance pressure.
+
+### Online Therapy
+
+Secure virtual sessions accessible across Namibia.
+
+### In-Person Therapy (Tsumeb)
+
+Private, face-to-face sessions in a calm and welcoming setting.
+
+---
+
+# 📄 INDIVIDUAL COUNSELLING
+
+`/services/individual-counselling`
+
+## Headline
+
+Individual Counselling in Namibia
+
+## Intro
+
+There are times when emotional weight becomes difficult to manage alone.
+
+Individual counselling provides a private, structured space to explore thoughts, feelings, and life challenges without judgment.
+
+## Areas of Support
+
+• Anxiety and persistent worry
+• Depression and low mood
+• Grief and loss
+• Trauma recovery
+• Stress and burnout
+• Self-esteem challenges
+• Life transitions and decision-making
+• Relationship difficulties
+
+## What to Expect
+
+Sessions are guided conversations designed to help you:
+
+• Gain clarity
+• Develop coping strategies
+• Understand patterns
+• Build resilience
+• Improve emotional regulation
+
+Confidentiality is strictly maintained.
+
+Sessions are available online nationwide or in person in Tsumeb.
+
+---
+
+# 📄 COUPLES COUNSELLING
+
+`/services/couples-counselling`
+
+## Headline
+
+Couples Counselling in Namibia
+
+Relationships can experience strain during times of stress, miscommunication, or unresolved conflict.
+
+Couples counselling provides a structured space where both partners can speak openly and be heard.
+
+## Support Areas
+
+• Communication breakdown
+• Trust issues
+• Conflict resolution
+• Emotional disconnection
+• Parenting disagreements
+• Pre-marital guidance
+
+The goal is not to assign blame.
+The goal is to restore understanding and clarity.
+
+Sessions are available online across Namibia or in person in Tsumeb.
+
+---
+
+# 📄 CHILD COUNSELLING
+
+`/services/child-counselling`
+
+## Headline
+
+Child Counselling in Namibia
+
+Children often express emotional distress through behaviour rather than words.
+
+Child counselling offers a supportive environment where children can safely explore their feelings.
+
+## Support Areas
+
+• Behavioural changes
+• Emotional regulation challenges
+• School difficulties
+• Anxiety or withdrawal
+• Family transitions
+• Trauma or stressful events
+
+Parents are guided appropriately while maintaining the child’s emotional safety.
+
+Confidentiality and professional ethics are upheld at all times.
+
+---
+
+# 📄 TRAUMA COUNSELLING
+
+`/services/trauma-counselling`
+
+## Headline
+
+Trauma Counselling in Namibia
+
+Traumatic experiences can affect thoughts, emotions, relationships, and daily functioning.
+
+Trauma counselling provides structured support for processing and recovery.
+
+Sessions focus on:
+
+• Emotional stabilization
+• Processing distressing experiences
+• Developing coping strategies
+• Rebuilding confidence and safety
+
+Healing takes time.
+Support makes it possible.
+
+---
+
+# 📄 WORKPLACE COUNSELLING
+
+`/services/workplace-counselling`
+
+## Headline
+
+Workplace & Burnout Counselling
+
+Work environments can create significant emotional pressure.
+
+Support is available for:
+
+• Burnout
+• Work-related trauma
+• Chronic stress
+• Performance anxiety
+• Leadership stress
+• Career transitions
+
+Healthy professionals build healthy workplaces.
+
+---
+
+# 📄 ONLINE THERAPY
+
+`/services/online-therapy`
+
+## Headline
+
+Online Counselling Across Namibia
+
+Distance should never prevent access to professional support.
+
+Online sessions are:
+
+• Secure
+• Confidential
+• Structured
+• Conducted via secure digital platforms
+
+Ideal for individuals in remote areas or those seeking flexible scheduling.
+
+All ethical and confidentiality standards apply equally to virtual sessions.
+
+---
+
+# 📄 IN-PERSON THERAPY
+
+`/services/in-person-therapy-tsumeb`
+
+## Headline
+
+In-Person Counselling in Tsumeb
+
+Private, face-to-face sessions are available in Tsumeb, Oshikoto Region.
+
+The practice environment is calm, respectful, and confidential.
+
+Appointments are available:
+
+Monday – Friday: 08:00 – 17:00
+Saturday: 08:00 – 12:00
+
+---
+
+# 📄 PRICING PAGE
+
+`/pricing`
+
+## Headline
+
+Session Fees
+
+Transparency builds trust.
+
+Individual Session: [Insert Fee]
+Couples Session: [Insert Fee]
+Child Session: [Insert Fee]
+Online Session: [Insert Fee]
+
+Payment methods accepted: [Insert]
+
+If you have questions regarding fees, please contact us directly.
+
+---
+
+# 📄 FAQ
+
+`/faq`
+
+## Common Questions
+
+### Are sessions confidential?
+
+Yes. All sessions are strictly confidential in accordance with professional ethical standards.
+
+### How long is each session?
+
+Sessions typically last 45–60 minutes.
+
+### How do I book?
+
+You may book via WhatsApp, phone call, or the contact form.
+
+### Are online sessions secure?
+
+Yes. Secure platforms are used to protect your privacy.
+
+### How often should I attend?
+
+This depends on your individual needs and will be discussed during your first session.
+
+---
+
+# 📄 CONTACT PAGE
+
+`/contact`
+
+## Headline
+
+Contact Nangura Social Care
+
+Phone & WhatsApp: +264 81 123 4567
+Email: [info@nangurasocialcare.org](mailto:info@nangurasocialcare.org)
+Location: Tsumeb, Oshikoto Region
+Serving Namibia Nationwide (Online)
+
+Working Hours:
+Mon–Fri: 08:00 – 17:00
+Sat: 08:00 – 12:00
+
+---
+
+# 📄 CRISIS SUPPORT PAGE
+
+`/crisis-support-namibia`
+
+## Headline
+
+If You Are in Immediate Crisis
+
+If you are experiencing thoughts of self-harm or feel unsafe, please contact your nearest hospital or emergency services immediately.
+
+This practice does not provide emergency crisis intervention.
+
+Once you are safe, structured counselling support is available to assist you in long-term recovery.
+
+You deserve safety and care.
+
+---
+
+# ⚖ LEGAL PAGES
+
+---
+
+# 📄 PRIVACY POLICY
+
+`/privacy-policy`
+
+Nangura Social Care is committed to protecting your privacy.
+
+Information collected may include:
+
+• Name
+• Contact details
+• Booking information
+
+Personal information is:
+
+• Stored securely
+• Not sold or shared with third parties
+• Used only for communication and service provision
+
+Online sessions use secure platforms.
+All counselling sessions are confidential in accordance with professional ethical standards and Namibian regulations.
+
+You may request access to your personal information at any time.
+
+Contact: [info@nangurasocialcare.org](mailto:info@nangurasocialcare.org)
+
+---
+
+# 📄 TERMS OF SERVICE
+
+`/terms-of-service`
+
+By booking a session with Nangura Social Care, you agree to:
+
+• Provide accurate personal information
+• Respect scheduled session times
+• Provide reasonable notice for cancellations
+
+Missed appointments without notice may incur fees.
+
+This service does not replace emergency medical or psychiatric services.
+
+All counselling services are provided within professional ethical standards.
+
+---
+
+# 📄 COOKIE POLICY
+
+`/cookie-policy`
+
+This website may use cookies to improve user experience and analyze site performance.
+
+Cookies do not collect sensitive personal counselling information.
+
+By using this site, you consent to the use of cookies.
+
+---
+
+# 📄 DISCLAIMER
+
+`/disclaimer`
+
+The information on this website is for informational purposes only.
+
+It does not replace professional medical or psychiatric advice.
+
+If you are experiencing a medical emergency, contact emergency services immediately.
+
+Nangura Social Care provides structured counselling services within professional scope and ethical guidelines.
+
+---
+
+# ✅ You Now Have:
+
+• Full public site copy
+• Service pages
+• Crisis page
+• Pricing page
+• Legal pages
+• Contact & FAQ
+
+Ready to plug into Vue.
+
+---
+
+If you want next, I can:
+
+• Tighten the SEO keyword density per page
+• Rewrite the About page to feel more personal and powerful
+• Or craft a strong therapist bio section to increase trust conversion
+
+You’re building something important here.

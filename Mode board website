@@ -1,0 +1,166 @@
+Mode board website
+I like the clean ui/ux and the proper usage of animation and parrallax scrolling https://sponsorships.aramco.com/cba/shoot-for-the-future/
+
+
+
+the information and services offered are similar to the services of the website i am developing for a client https://gulialewis.com/
+
+
+for this one its the clean non-distracting ui/ux it has clean animations https://www.drabigailphillips.com/
+
+
+the attached is the logo for nangura social care business based in namibia, for counselling services online and in person. from the logo, generate the brand color palette and mood, as well as tailwindcss color in this form (@import "tailwindcss";
+
+
+
+@theme {
+
+ --color-primary: #1C72AB;
+
+ --color-secondary: #D5D6DA;
+
+ --color-accent: #C4C7D1;
+
+
+
+ --color-text: #D5D6DA;
+
+ --color-neutral: #6E7585;
+
+ --color-neutral-dark: #0B0C14;
+
+ --color-background: #020106;
+
+
+
+ --color-danger: #D5D6DA;
+
+ --color-success: #1C72AB;
+
+
+
+ --fontfamily-sans: Jost, sans-serif;
+
+ --animation-float: float 6s ease-in-out infinite;
+
+ --animation-spin-slow: spin 10s linear infinite;
+
+
+
+ --keyframes-float-0%, 100%-transform: translateY(0);
+
+ --keyframes-float-50%-transform: translateY(-20px);
+
+
+
+ --font-sans: serif;
+
+ --font-space: Grotesk;
+
+}
+
+
+
+/* Base Styles */
+
+body {
+
+  background-color: var(--color-background);
+
+  color: var(--color-text);
+
+  font-family: var(--font-sans);
+
+  overflow-x: hidden;
+
+}
+
+
+
+/* Custom Scrollbar for that "Luxury" feel */
+
+::-webkit-scrollbar {
+
+  width: 6px;
+
+}
+
+::-webkit-scrollbar-track {
+
+  background: var(--color-neutral-dark);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+  background: var(--color-primary);
+
+  border-radius: 10px;
+
+}
+
+
+
+/* Glassmorphism Utilities */
+
+.glass-panel {
+
+  background: rgba(11, 12, 20, 0.7);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+}
+
+
+
+.input-field {
+
+  @apply w-full bg-neutral-dark border border-neutral/20 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors text-text placeholder-neutral/50;
+
+}
+
+
+
+.btn-primary {
+
+  @apply bg-primary text-white px-6 py-2 rounded-lg hover:brightness-110 transition-all active:scale-95 font-medium;
+
+}
+
+
+
+/* The "Bilyzna" DNA */
+
+@layer components {
+
+  .glass-panel {
+
+    @apply bg-[#0B0C14]/80 backdrop-blur-xl border border-white/5 shadow-xl;
+
+  }
+
+  .glass-input {
+
+    @apply w-full bg-[#0B0C14] border border-[#6E7585]/20 rounded-lg px-4 py-3 text-[#D5D6DA] focus:border-[#1C72AB] focus:ring-1 focus:ring-[#1C72AB] focus:outline-none transition-all duration-300;
+
+  }
+
+  .btn-primary {
+
+    @apply bg-[#1C72AB] text-white px-6 py-2.5 rounded-lg hover:bg-[#1C72AB]/90 active:scale-95 transition-all duration-200 font-medium tracking-wide flex items-center justify-center gap-2;
+
+  }
+
+  .btn-ghost {
+
+    @apply text-[#6E7585] hover:text-[#D5D6DA] hover:bg-white/5 px-4 py-2 rounded-lg transition-colors;
+
+  }
+
+}) and this color palette and css classes to be used through the website design. inshort design the theme of the website, get inspiration from ("Mode board website
+
+I like the clean ui/ux and the proper usage of animation and parrallax scrolling https://sponsorships.aramco.com/cba/shoot-for-the-future/
+
+for this one its the clean non-distracting ui/ux it has clean animations https://www.drabigailphillips.com/"), for clarity ask me question before you proceed

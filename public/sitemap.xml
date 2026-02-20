@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://nangurasocialcare.org/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://nangurasocialcare.org/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services Main -->
+  <url>
+    <loc>https://nangurasocialcare.org/services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Individual Counselling -->
+  <url>
+    <loc>https://nangurasocialcare.org/services/individual-counselling</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Couples Counselling -->
+  <url>
+    <loc>https://nangurasocialcare.org/services/couples-counselling</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Child Counselling -->
+  <url>
+    <loc>https://nangurasocialcare.org/services/child-counselling</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Trauma Counselling -->
+  <url>
+    <loc>https://nangurasocialcare.org/services/trauma-counselling</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Workplace Counselling -->
+  <url>
+    <loc>https://nangurasocialcare.org/services/workplace-counselling</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Online Therapy -->
+  <url>
+    <loc>https://nangurasocialcare.org/services/online-therapy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- In Person Therapy -->
+  <url>
+    <loc>https://nangurasocialcare.org/services/in-person-therapy-tsumeb</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Pricing -->
+  <url>
+    <loc>https://nangurasocialcare.org/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://nangurasocialcare.org/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Crisis Support -->
+  <url>
+    <loc>https://nangurasocialcare.org/crisis-support-namibia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://nangurasocialcare.org/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://nangurasocialcare.org/privacy-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>
