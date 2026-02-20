@@ -218,17 +218,18 @@ const _setupBackgroundTasks = () => {
 // ----------------------------------------------------------------------
 // Periodic token refresh (every 45 minutes)
 // ----------------------------------------------------------------------
-  state._tokenRefreshTimer.value = setInterval(async () => {
-    if (!state.currentUser.value) return;
+  // Fix this too:
+state._tokenRefreshTimer.value = setInterval(async () => {
+  if (!auth.currentUser) return; // Use auth.currentUser, not state.currentUser.value
 
-    console.debug('[Background] Refreshing token...');
-    try {
-      await state.currentUser.value.getIdTokenResult(true);
-      console.debug('[Background] Token refreshed successfully');
-    } catch (error) {
-      console.error('[Background] Token refresh failed:', error);
-    }
-  }, CACHE_CONFIG.TOKEN_REFRESH_INTERVAL);
+  console.debug('[Background] Refreshing token...');
+  try {
+    await auth.currentUser.getIdTokenResult(true); // Use auth.currentUser
+    console.debug('[Background] Token refreshed successfully');
+  } catch (error) {
+    console.error('[Background] Token refresh failed:', error);
+  }
+}, CACHE_CONFIG.TOKEN_REFRESH_INTERVAL);
 
 // ----------------------------------------------------------------------
 // Periodic cache cleanup (every hour)
@@ -344,13 +345,13 @@ const getDefaultDestination = () =>{
 * Force refresh user claims
 * @returns {Promise<boolean>} Success status
 */
-const refreshUserClaims =  async() => {
-  if (!state.currentUser.value) return false;
+const refreshUserClaims = async() => {
+  if (!auth.currentUser) return false; // Use auth.currentUser, not state.currentUser.value
 
   try {
     console.debug('[Claims] Force refreshing claims...');
-    await state.currentUser.value.getIdTokenResult(true);
-    await syncUserSession(state.currentUser.value, true);
+    await auth.currentUser.getIdTokenResult(true); // Use auth.currentUser
+    await syncUserSession(auth.currentUser, true); // Pass auth.currentUser
     console.debug('[Claims] Refresh complete');
     return true;
   } catch (error) {
@@ -660,13 +661,14 @@ cacheAgeMinutes(){
 // TOKEN REFRESH - ONLY WHEN NEEDED
 // ============================================
 async refreshClaimsIfNeeded() {
-  if (!state.currentUser?.uid) return false;
+  if (!auth.currentUser?.uid) return false;
 
 // Check token age (refresh if older than 10 minutes)
+  // Check token age (refresh if older than 10 minutes)
   const tokenAge = Date.now() - (state.currentUser._cachedAt || 0);
-  if (tokenAge < 10 * 60 * 1000) {
-return true; // Token still fresh
-}
+  if (tokenAge < 30 * 60 * 1000) {
+    return true; // Token still fresh
+  }
 
 try {
   const tokenResult = await auth.currentUser.getIdTokenResult(true);
