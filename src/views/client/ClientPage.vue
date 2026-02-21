@@ -42,11 +42,11 @@
             </button>
 
             <div class="absolute right-0 mt-2 w-56 bg-white rounded-3xl shadow-2xl border border-gray-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-[110] p-2">
-              <router-link to="/client/profile" class="flex items-center gap-3 p-4 rounded-2xl hover:bg-[#FAFAF9] text-gray-600 hover:text-[var(--color-primary)] transition-all">
+              <router-link to="/my/profile" class="flex items-center gap-3 p-4 rounded-2xl hover:bg-[#FAFAF9] text-gray-600 hover:text-[var(--color-primary)] transition-all">
                 <i class="fas fa-user-circle opacity-50"></i>
                 <span class="text-sm font-medium">My Profile</span>
               </router-link>
-              <router-link to="/client/data" class="flex items-center gap-3 p-4 rounded-2xl hover:bg-[#FAFAF9] text-gray-600 hover:text-[var(--color-primary)] transition-all">
+              <router-link to="/my/data" class="flex items-center gap-3 p-4 rounded-2xl hover:bg-[#FAFAF9] text-gray-600 hover:text-[var(--color-primary)] transition-all">
                 <i class="fas fa-shield-alt opacity-50"></i>
                 <span class="text-sm font-medium">Privacy & Data</span>
               </router-link>
@@ -121,7 +121,7 @@ const store = useAppStore();
 const mobileMenuOpen = ref(false);
 const hasNotifications = ref(true);
 
-const userInitials = computed(() => store.currentUser?.fullName.charAt(0) || 'N');
+const userInitials = 'N'//computed(() => store.currentUser?.fullName.charAt(0) || 'N');
 
 
 const navItems = [

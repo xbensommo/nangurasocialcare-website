@@ -102,7 +102,17 @@ export const publicRoutes = (lazy) => ({
 			    path: 'services/:slug',
 			    name: 'ServiceDetail',
 			    component: lazy('ServiceDetails', 'services')
-			  }
+			  },
+			  {
+				path: 'privacy_policy',
+				name: 'PrivacyPolicy',
+				component: lazy('Privacy', 'public'),
+				meta: {
+					title: 'Privacy Policy | Nangura Social Care',
+					requiresAuth: false,
+					layout: 'LegalLayout'
+				}
+			},
 
 			/*
 
@@ -250,6 +260,8 @@ export const publicRoutes = (lazy) => ({
 					requiresAuth: false,
 					layout: 'LegalLayout'
 				}
-			}*/]
+			}*/
+
+			]
 }
 );

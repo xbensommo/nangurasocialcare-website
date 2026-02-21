@@ -35,6 +35,28 @@
             </div>
           </div>
         </div>
+
+        <!-- Account Actions -->
+        <div class="bg-white rounded-[32px] border border-gray-100 p-6 shadow-sm space-y-4">
+          <h4 class="text-[10px] uppercase tracking-[0.3em] font-bold text-gray-400 mb-2">
+            Account Actions
+          </h4>
+
+          <button @click="editProfile"
+                  class="w-full py-3 bg-[var(--color-primary)] text-white rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-[var(--color-primary)]/80 transition-all">
+            Edit Profile
+          </button>
+
+          <button @click="changePassword"
+                  class="w-full py-3 border border-[var(--color-primary)] text-[var(--color-primary)] rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-[var(--color-primary)]/5 transition-all">
+            Change Password
+          </button>
+
+          <button @click="closeAccount"
+                  class="w-full py-3 bg-red-600 text-white rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-red-700 transition-all">
+            Close Account
+          </button>
+        </div>
       </aside>
 
       <!-- CENTER -->
@@ -81,6 +103,23 @@
             class="px-8 py-4 rounded-full bg-[var(--color-primary)] text-white text-[10px] font-bold uppercase tracking-widest shadow-lg hover:-translate-y-1 transition-all">
             Book a Session
           </router-link>
+        </div>
+
+        <!-- Security & Settings -->
+        <div class="bg-white rounded-[32px] border border-gray-100 p-6 shadow-sm space-y-4">
+          <h4 class="text-[10px] uppercase tracking-[0.3em] font-bold text-gray-400 mb-2">
+            Security & Preferences
+          </h4>
+
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-gray-600">Two-Factor Authentication</span>
+            <input type="checkbox" v-model="security.twoFA" class="toggle toggle-primary" />
+          </div>
+
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-gray-600">Email Notifications</span>
+            <input type="checkbox" v-model="security.emailNotifications" class="toggle toggle-primary" />
+          </div>
         </div>
 
       </main>
@@ -133,6 +172,11 @@ const store = useAppStore()
 const completedSessions = ref([])
 const confirmedSessions = ref([])
 
+const security = ref({
+  twoFA: false,
+  emailNotifications: true
+})
+
 const initials = computed(() => {
   const name = store.currentUser?.fullName || ''
   return name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()
@@ -142,39 +186,20 @@ onMounted(async () => {
   const clientId = store.currentUser?.uid
   if (!clientId) return
 
-  // 1️⃣ Get completed sessions
-  await store.sessionsActions.fetchByFilters({
-    status: 'completed',
-    clientId
-  })
-
+  await store.sessionsActions.fetchByFilters({ status: 'completed', clientId })
   completedSessions.value = [...store.sessions.items]
 
-  await store.sessionsActions.getAggregatedCount({
-    status: 'completed',
-    clientId
-  })
+  await store.sessionsActions.getAggregatedCount({ status: 'completed', clientId })
 
-  // 2️⃣ Get confirmed sessions
-  await store.sessionsActions.fetchByFilters({
-    status: 'confirmed',
-    clientId
-  })
-
-
+  await store.sessionsActions.fetchByFilters({ status: 'confirmed', clientId })
   confirmedSessions.value = [...store.sessions.items]
 })
 
 const nextSession = computed(() => {
   const now = new Date()
-
   const future = confirmedSessions.value
     .filter(s => new Date(`${s.startDate}T${s.startTime}`) > now)
-    .sort((a, b) =>
-      new Date(`${a.startDate}T${a.startTime}`) -
-      new Date(`${b.startDate}T${b.startTime}`)
-    )
-
+    .sort((a,b) => new Date(`${a.startDate}T${a.startTime}`) - new Date(`${b.startDate}T${b.startTime}`))
   return future[0] || null
 })
 
@@ -185,13 +210,25 @@ const nextSessionText = computed(() =>
 )
 
 const recentCompleted = computed(() =>
-  [...completedSessions.value]
-    .sort((a, b) =>
-      new Date(`${b.startDate}T${b.startTime}`) -
-      new Date(`${a.startDate}T${a.startTime}`)
-    )
-    .slice(0, 3)
+  [...completedSessions.value].sort((a,b) => new Date(`${b.startDate}T${b.startTime}`) - new Date(`${a.startDate}T${a.startTime}`)).slice(0,3)
 )
+
+// ACTIONS
+const editProfile = () => {
+  // Redirect to edit page or open modal
+  console.log('Edit profile clicked')
+}
+
+const changePassword = () => {
+  // Redirect to change password page or modal
+  console.log('Change password clicked')
+}
+
+const closeAccount = async () => {
+  if (!confirm('Are you sure you want to close your account? This action cannot be undone.')) return
+  await store.currentUserActions.closeAccount(store.currentUser?.uid)
+  alert('Your account has been closed.')
+}
 </script>
 
 <style scoped>

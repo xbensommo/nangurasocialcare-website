@@ -107,7 +107,7 @@
                 <td class="px-6 py-4 text-right">
                   <router-link 
                     :to="`${baseRoute}/${item.id}/${item._shard_source}`" 
-                    class="opacity-0 group-hover:opacity-100 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-primary)] transition-all inline-flex items-center gap-1"
+                    class="group-hover:opacity-100 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-primary)] transition-all inline-flex items-center gap-1"
                   >
                     Review <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                   </router-link>
@@ -166,7 +166,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, watch } from 'vue';
 import { useAppStore } from '@/stores/appStore';
 
 // [NOTE: Props and core logic remain identical to your original code. I am only updating visual helper functions]
@@ -175,6 +175,9 @@ const props = defineProps({
   collectionName: String,
   baseRoute: String,
   filters: { type: Array, default: () => ['all', 'pending', 'accepted', 'denied', 'active', 'suspended'] },
+  filterOptions: {
+    required: true, type: Object, default: () => {}
+  },
   columns: { type: Array, required: true }, 
   statusActions: {
     required: true,
@@ -250,9 +253,10 @@ onMounted(async () => {
 });
 
 const loadData = async () => {
+  console.log(props.filterOptions)
   loading.value = true;
   if (store[actionName]) {
-    await store[actionName].fetchInitialPage();
+    await store[actionName].fetchByFilters(props.filterOptions);
   }
   loading.value = false;
 };
@@ -300,7 +304,7 @@ const hasMore = computed(() => store[collectionName]?.hasMore);
 const loadNextPage = async () => {
   loading.value = true;
   if(store[actionName]?.fetchNextPage) {
-      await store[actionName].fetchNextPage();
+      await store[actionName].fetchNextPage(props.filterOptions);
   }
   loading.value = false;
 };
@@ -316,6 +320,8 @@ const formatDate = (val) => {
   if (isNaN(date.getTime())) return 'Invalid Date';
   return date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
 };
+
+
 </script>
 
 <style scoped>

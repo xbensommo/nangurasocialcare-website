@@ -9,7 +9,7 @@ import { connectFunctionsEmulator, getFunctions } from 'firebase/functions';
 
 const firebaseConfig = {
   apiKey: "AIzaSyA8eoQPyEy232O76ZDfbpW-G1Xos-NsXaM",
-  authDomain: "nangurasocialcare.firebaseapp.com",
+  authDomain: "nangurasocialcare.org",
   projectId: "nangurasocialcare",
   storageBucket: "nangurasocialcare.firebasestorage.app",
   messagingSenderId: "911240338406",

@@ -4,23 +4,27 @@
       
       <main class="w-full">
         <DataTable 
-          title="User Management"
-          collectionName="users"
-          baseRoute="/pra/user/view"
+          title="Sessions Booking Management"
+          collectionName="sessions"
+          baseRoute="pra/sessions/view"
           :columns="[
             { 
               key: 'fullName', 
-              label: 'Names', 
+              label: 'Client Name', 
               type: 'identity', 
               imgKey: 'coverImage', 
               subKey: 'type' 
             },
-            { key: 'email', label: 'Email', type: 'badge' },
+            { key: 'message', label: 'Client Note', type: 'text' },
+
             { key: 'phone', label: 'Cell Phone', type: 'number' },
-            { key: 'createdAt', label: 'Joined', type: 'date' }
+            { key: 'email', label: 'Email', type: 'email' },
+            { key: 'status', label: 'Status', type: 'badge' },
+            { key: 'startDate', label: 'Booked Date', type: 'date' },
+            { key: 'timee', label: 'Booked Time', type: 'date' }
           ]"
-          :filters="['all', 'active', 'suspended']"
-          :statusActions="status_actions" :filterOptions="{ role: 'user'}"
+          :filters="['all', 'pending', 'confirmed', 'completed']"
+          :statusActions="status_actions"
         />
       </main>
 
@@ -35,15 +39,15 @@ import DataTable from '@/components/DataTable.vue'
 
 const status_actions = [
   { 
-    action: 'Activate', 
-    key: 'active', 
+    action: 'Confirm', 
+    key: 'confirmed', 
     icon: 'fa-user-check', 
     intent: 'success', 
     scopes: ['all'] 
   },
   { 
-    action: 'Deactivate', 
-    key: 'in-active', 
+    action: 'Cancel', 
+    key: 'cancelled', 
     icon: 'fa-user-minus', 
     intent: 'warning', 
     scopes: ['active'] 

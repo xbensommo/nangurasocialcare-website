@@ -509,7 +509,6 @@ return {
       state.currentUser.value = null;
 //window.location.href = '/'
       cleanup()
-      console.clear()
     });
   },
 
@@ -664,9 +663,9 @@ async refreshClaimsIfNeeded() {
   if (!auth.currentUser?.uid) return false;
 
 // Check token age (refresh if older than 10 minutes)
-  // Check token age (refresh if older than 10 minutes)
+  // Check token age (refresh if older than 120 minutes)
   const tokenAge = Date.now() - (state.currentUser._cachedAt || 0);
-  if (tokenAge < 30 * 60 * 1000) {
+  if (tokenAge < 120 * 60 * 1000) {
     return true; // Token still fresh
   }
 
@@ -676,9 +675,7 @@ try {
     ...state.currentUser.value,
     claims: {
       admin: !!tokenResult.claims.admin,
-      bidder: !!tokenResult.claims.bidder,
-      support: !!tokenResult.claims.support,
-      auditor: !!tokenResult.claims.auditor
+      user: !!tokenResult.claims.user
     },
     _cachedAt: Date.now()
   };

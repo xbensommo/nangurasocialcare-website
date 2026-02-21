@@ -3,7 +3,7 @@
     <div
       v-for="i in count"
       :key="i"
-      class="animate-pulse h-12 rounded-xl bg-[var(--color-neutral)]"
+      class="animate-pulse h-12 rounded-xl bg-[var(--color-primary)]"
     />
   </div>
 </template>
